@@ -13,3 +13,6 @@ I used a simple ambient lighting that varied slightly in the range [0-1] based o
 To make the brightness of distant terrain look more natural, I decided to take the edge off far away mountains by adding some fog to the scene. I opted for a uniform fog.  I found a great explanation here.
 
 Overall, with only 3 distinct materials I’m quite pleased by the final effect. Certainly more material ranges could be added (for example green trees, water instead of snow, perhaps snow on the tops of mountains, simulating the sun by have a brighter section of the sky) quite easily by creating a few more material IDs and mapping to different their  ranges. Perhaps using the terrain/noise function with different weights/values could be used to simulate trees, or rolling hills.
+
+##Run
+To run simply copy the code in terrain and paste into a new shadertoy at shadertoy.com
