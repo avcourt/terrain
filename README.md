@@ -1,6 +1,6 @@
 # Terrain Shader
 
-![Space Dude](img/screenshot.png)
+![ShaderToy screenshot](img/screenshot.png)
 
 This terrain project has 3 main components: The terrain generation itself, which uses a 2-d noise generating algorithm (found at http://shadertoy.wikia.com/wiki/Noise), ray casting to determine what the camera is seeing (only three materials,: rock, sky, ice) and some way to light it up all up, and finally the camera itself. There’s no way to see all your procedurally generated terrain if the camera doesn’t move anywhere, so I programmed a very basic camera fly-over effect by simply moving the camera position along the Z-axis.
 
