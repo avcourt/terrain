@@ -1,5 +1,5 @@
 ## Terrain Shader
-*Procedural terrain shader using Perlin noise in GLSL* 
+***A procedural terrain shader using Perlin noise in GLSL*** 
 
 ![ShaderToy screenshot](img/screenshot.png)
 
