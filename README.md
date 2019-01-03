@@ -3,7 +3,7 @@
 
 ![ShaderToy screenshot](img/screenshot.png)
 
-This terrain project has 3 main components: 
+This shader has 3 main components: 
 - The terrain generation itself, which uses a 2-d noise generating algorithm found [here](http://shadertoy.wikia.com/wiki/Noise) 
 - Ray casting to determine what the camera is seeing:
     - only three materials: `rock`, `sky`, `ice` 
@@ -26,4 +26,4 @@ As mentioned above, to make the brightness of distant terrain look more natural,
 Overall, with only 3 distinct materials I’m quite pleased by the final effect. Certainly more material ranges could be added. For example, green trees, water instead of snow. Perhaps snow on the tops of mountains. Simulating the sun by have a brighter section of the sky etc. Perhaps using the terrain/noise function with different weights/values could be used to simulate trees, or rolling hills.
 
 ### Run
-To run, simply copy the code in terrain and paste into a new shadertoy at [ShaderToy](https://www.shadertoy.com/new)
+To run, simply copy the code in `terrain.glsl` and paste into a new shadertoy at [ShaderToy](https://www.shadertoy.com/new)
