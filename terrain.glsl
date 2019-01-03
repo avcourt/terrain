@@ -50,8 +50,8 @@ float terrain( vec2 p, int freq ) {
 	return h;
 }
 
-//this function determines how to colour, based on y.pos 
-//out of the 3 basics SKY, MTN, ICE, assigns -1.0, 0.0 or 1.0
+// this function determines how to colour, based on y.pos 
+// out of the 3 basics SKY, MTN, ICE, assigns -1.0, 0.0 or 1.0
 vec2 map( vec3 pos, int octaves ) {
 	
 	float dMin = MAX_DIST;	// nearest intersection
