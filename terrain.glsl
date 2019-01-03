@@ -2,7 +2,7 @@
 * Author: Andrew Vaillancourt
 */
 
-// CONSTANTS in throughout, play around with some values
+// CONSTANTS, try playing around with some values
 
 // colors
 const vec3 SKY_COL = vec3(0.76,0.94, 1.0);
@@ -16,7 +16,8 @@ const vec3 EPS = vec3(0.001, 0.0, 0.0); // smaller values = more detail when nor
 const float MAX_DIST = 60.0;            // used when ray casting to limit ray length
 const int RAYS = 30;                    // number of rays cast, set lower if framerate slows
 const int FREQUENCY = 15;               // try lower values if framerate issues encountered
-//Used in terrain function
+
+// the following are used in terrain function
 const float START_HEIGHT = 0.4;
 const float WEIGHT = 0.6;
 const float MULT = 0.35;
@@ -39,8 +40,8 @@ float noise( vec2 p ) {
 //generate terrain using above noise algorithm
 float terrain( vec2 p, int freq ) {	
 	float h = START_HEIGHT; // height, start at higher than zero so there's not too much snow/ice
-	float w = WEIGHT; // weight
-	float m = MULT; // multiplier
+	float w = WEIGHT; 	// weight
+	float m = MULT; 	// multiplier
 	for (int i = 0; i < freq; i++) {
 		h += w * noise((p * m)); // adjust height based on noise algorithm
 		w *= 0.5;
@@ -53,8 +54,8 @@ float terrain( vec2 p, int freq ) {
 //out of the 3 basics SKY, MTN, ICE, assigns -1.0, 0.0 or 1.0
 vec2 map( vec3 pos, int octaves ) {
 	
-	float dMin = MAX_DIST; // nearest intersection
-	float d; // depth
+	float dMin = MAX_DIST;	// nearest intersection
+	float d; 		// depth
 	float materialID = SKY; // set default material id to sky
 	
 	// rocky terrain - MTN
@@ -83,8 +84,8 @@ vec2 castRay( vec3 ro, vec3 rd, int freq) {
 	float delta = 0.2;  // step
 	float material = -1.0;
 	for (int i = 0; i < RAYS; i++) {
-		if (dist < MAX_DIST ) { // ignore if 'sky'
-			dist += delta;      // next step
+		if (dist < MAX_DIST ) {	// ignore if 'sky'
+			dist += delta; 		// next step
 			vec2 result = map(ro + rd*dist, freq); // get intersection
 			delta = result.x; 
 			material = result.y; // set material id based on y pos
