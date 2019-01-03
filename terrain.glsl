@@ -11,11 +11,11 @@ const vec3 ICE_COL = vec3(0.9, 0.9, 1.0);
 const vec3 LIGHT_COL = vec3(0.95, 1.0, 0.89); // white, slightly yellow light
 
 const float FOG_DENSITY = -0.04;
-const float SKY = -1.0; //maertialID for sky
-const vec3 EPS = vec3(0.001, 0.0, 0.0); //smaller values = more detail when normalizing
-const float MAX_DIST = 60.0; //used when ray casting to limit ray length
-const int RAYS = 30; //number of rays cast, set lower if framerate slows
-const int FREQUENCY = 15; //try lower values if framerate issues encountered
+const float SKY = -1.0;                 // materialID for sky
+const vec3 EPS = vec3(0.001, 0.0, 0.0); // smaller values = more detail when normalizing
+const float MAX_DIST = 60.0;            // used when ray casting to limit ray length
+const int RAYS = 30;                    // number of rays cast, set lower if framerate slows
+const int FREQUENCY = 15;               // try lower values if framerate issues encountered
 //Used in terrain function
 const float START_HEIGHT = 0.4;
 const float WEIGHT = 0.6;
@@ -79,12 +79,12 @@ vec2 map( vec3 pos, int octaves ) {
 // ray casting funciton. ro = ray origin, rd = ray direction
 // returns materialID
 vec2 castRay( vec3 ro, vec3 rd, int freq) {
-	float dist = 0.0; // distance
-	float delta = 0.2; // step
+	float dist = 0.0;   // distance
+	float delta = 0.2;  // step
 	float material = -1.0;
 	for (int i = 0; i < RAYS; i++) {
-		if (dist < MAX_DIST ) { //ignore if 'sky'
-			dist += delta; // next step
+		if (dist < MAX_DIST ) { // ignore if 'sky'
+			dist += delta;      // next step
 			vec2 result = map(ro + rd*dist, freq); // get intersection
 			delta = result.x; 
 			material = result.y; // set material id based on y pos
@@ -136,8 +136,8 @@ vec3 render( vec3 ro, vec3 rd ) {
         color = ICE_COL;
 			
 		// add light
-		float ambient = clamp( 0.5 + 0.5 * normal.y, 0.0, 1.0); // ambient
-		float diffuse = clamp( dot( normal, lightPos ), 0.0, 2.0); // diffuse
+		float ambient = clamp( 0.5 + 0.5 * normal.y, 0.0, 1.0);     // ambient
+		float diffuse = clamp( dot( normal, lightPos ), 0.0, 2.0);  // diffuse
 	
 		color += (0.3 * ambient) * LIGHT_COL;
 		color *= (2.1 * diffuse) * LIGHT_COL;
