@@ -1,7 +1,7 @@
 ## Terrain Shader
 ***A procedural terrain shader using Perlin noise in GLSL*** 
 
-![ShaderToy screenshot](img/terrain-2.gif)
+![ShaderToy screenshot](img/terrain.gif)
 
 This shader has 3 main components: 
 - The terrain generation itself, which uses a 2-d noise generating algorithm found [here](http://shadertoy.wikia.com/wiki/Noise) 
