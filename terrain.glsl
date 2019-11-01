@@ -160,7 +160,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord ) {
 	// camera
 	float x = 0.0 + (2.5*iTime);
 	float y = 3.0;
-    float z = 1.0;
+	float z = 1.0;
 	vec3 camPos = vec3(x, y, z); // set camera position
 	
 	const vec3 up = vec3(0.0, 1.0, 0.0); // up vector
