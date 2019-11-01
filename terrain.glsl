@@ -1,5 +1,6 @@
 /*
 * Author: Andrew Vaillancourt
+* GitHub, Twitter: @avcourt
 */
 
 // CONSTANTS, try playing around with some values
