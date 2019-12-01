@@ -1,4 +1,4 @@
-## Terrain Shader
+# Procedural Terrain Pixel Shader
 ***A procedural terrain shader using 2D noise in GLSL*** 
 
 ![ShaderToy screenshot](img/terrain.gif)
